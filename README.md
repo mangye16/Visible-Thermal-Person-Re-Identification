@@ -8,7 +8,7 @@ Demo code for [Hierarchical Discriminative Learning for Visible Thermal Person R
 
 > The RegDB dataset can be downloaded from this [website](http://dm.dongguk.edu/link.html) by submitting a copyright form.
 
-### 2. Two-stream CNN network feature learning
+### 2. Two-stream CNN network feature learning (TONE)
 
 This demo code has been tested on Python 2.7 and Tensorflow v0.11.
 
@@ -23,7 +23,7 @@ This demo code has been tested on Python 2.7 and Tensorflow v0.11.
 (You can also modify the scripts to get different layers of features or evaluate different parameters. A trained model of one split can be downloaded on [BaiduYun](https://pan.baidu.com/s/1kVaMkPx) and [GoogleDrive](https://drive.google.com/open?id=1v2-Cry-9O5ZhHySLpMbsr-BJfe6Zxhe5))
 
 
-### 3. Hierarchical Cross-modality Metric Learning
+### 3. Hierarchical Cross-modality Metric Learning (HCML)
 This demo code has been tested on Matlab 2017a.
 
 > a. Make sure the format of the extracted features is correct. Demo Features on [BaiduYun](https://pan.baidu.com/s/1kVaMkPx) and [GoogleDrive](https://drive.google.com/open?id=1v2-Cry-9O5ZhHySLpMbsr-BJfe6Zxhe5)
