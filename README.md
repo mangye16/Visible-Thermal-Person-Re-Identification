@@ -6,7 +6,7 @@ Demo code for [Hierarchical Discriminative Learning for Visible Thermal Person R
 
 ### 1. Prepare the dataset.
 
-> The RegDB dataset can be downloaded from this [website](http://dm.dongguk.edu/link.html) by submitting a copyright form.
+- The RegDB dataset can be downloaded from this [website](http://dm.dongguk.edu/link.html) by submitting a copyright form.
 
 ### 2. Two-stream CNN network feature learning (TONE)
 
