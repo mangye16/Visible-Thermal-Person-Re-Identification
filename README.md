@@ -12,13 +12,13 @@ Demo code for [Hierarchical Discriminative Learning for Visible Thermal Person R
 
 This demo code has been tested on Python 2.7 and Tensorflow v0.11.
 
-> a. Prepare the dataset and the train/test lists as shown in "TONE/dataset.py".
+- a. Prepare the dataset and the train/test lists as shown in `TONE/dataset.py`.
 
-> b. Download the pre-trained alexnet model and modify the "TONE/model.py". [Alexnet](http://www.cs.toronto.edu/~guerzhoy/tf_alexnet/)
+- b. Download the pre-trained alexnet model and modify the `TONE/model.py`. [Alexnet](http://www.cs.toronto.edu/~guerzhoy/tf_alexnet/)
 
-> c. run "TONE/tone_train.py" to train the network. 
+- c. run `TONE/tone_train.py` to train the network. 
 
-> d. run "TONE/tone_eval.py" to evaluate the learned features and extract features for later metric learning. 
+- d. run `TONE/tone_eval.py` to evaluate the learned features and extract features for later metric learning. 
 
 (You can also modify the scripts to get different layers of features or evaluate different parameters. A trained model of one split can be downloaded on [BaiduYun](https://pan.baidu.com/s/1kVaMkPx) and [GoogleDrive](https://drive.google.com/open?id=1v2-Cry-9O5ZhHySLpMbsr-BJfe6Zxhe5))
 
@@ -26,12 +26,12 @@ This demo code has been tested on Python 2.7 and Tensorflow v0.11.
 ### 3. Hierarchical Cross-modality Metric Learning (HCML)
 This demo code has been tested on Matlab 2017a.
 
-> a. Make sure the format of the extracted features is correct. Demo Features on [BaiduYun](https://pan.baidu.com/s/1kVaMkPx) and [GoogleDrive](https://drive.google.com/open?id=1v2-Cry-9O5ZhHySLpMbsr-BJfe6Zxhe5)
+- a. Make sure the format of the extracted features is correct. Demo Features on [BaiduYun](https://pan.baidu.com/s/1kVaMkPx) and [GoogleDrive](https://drive.google.com/open?id=1v2-Cry-9O5ZhHySLpMbsr-BJfe6Zxhe5)
 
-> b. run "HCML/demo_hcml" to evaluate the cross-modal metric learning results.
+- b. run `HCML/demo_hcml` to evaluate the cross-modal metric learning results.
 
 
-- Demo results on RegDB dataset of one split *
+ Demo results on RegDB dataset of one split *
 
 |Methods | Rank@1 | Rank@5 | Rank@20 |mAP |
 | --------   | -----  | ---- | ----  | ----  |
