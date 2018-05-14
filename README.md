@@ -15,7 +15,7 @@ The framework of our IJCAI 18 paper: End-to-End Learning
 
 ### 2. Two-stream CNN network feature learning (TONE) in AAAI 2018
 
-This demo code has been tested on Python 2.7 and Tensorflow v0.11.
+All the code is in the folder 'TONE/' written in Python. This demo code has been tested on Python 2.7 and Tensorflow v0.11. 
 
 - a. Prepare the dataset and the train/test lists as shown in `TONE/dataset.py`. The list format is `image_path label`.
 
@@ -29,7 +29,7 @@ This demo code has been tested on Python 2.7 and Tensorflow v0.11.
 
 
 ### 3. Hierarchical Cross-modality Metric Learning (HCML) in AAAI 18
-This demo code has been tested on Matlab 2017a.
+All the code is in the folder 'HCML/' written in Matlab. This demo code has been tested on Matlab 2017a.
 
 - a. Make sure the format of the extracted features is correct. Demo Features on [BaiduYun](https://pan.baidu.com/s/1kVaMkPx) and [GoogleDrive](https://drive.google.com/open?id=1v2-Cry-9O5ZhHySLpMbsr-BJfe6Zxhe5)
 
@@ -38,11 +38,11 @@ This demo code has been tested on Matlab 2017a.
 
 ### 4. Bi-directional Dual-Constrained Top-Ranking (BDTR) in IJCAI 2018 
 
-This demo code has been tested on Python 2.7 and Tensorflow v0.11. `(Better Performance)`
+All the code is in the folder 'BDTR/' written in Python. This demo code has been tested on Python 2.7 and Tensorflow v0.11. `(Better Performance)`
 
-- a. Prepare the dataset and the train/test lists as shown in `TONE/dataset.py`. The list format is `image_path label`.
+- a. Prepare the dataset and the train/test lists as shown in `BDTR/dataset.py`. The list format is `image_path label`.
 
-- b. Download the pre-trained alexnet model and modify the `TONE/model.py`. [Alexnet](http://www.cs.toronto.edu/~guerzhoy/tf_alexnet/)
+- b. Download the pre-trained alexnet model and modify the `BDTR/model.py`. [Alexnet](http://www.cs.toronto.edu/~guerzhoy/tf_alexnet/)
 
 - c. run `python BDTR/bdtr_train.py` to train the network. 
 
