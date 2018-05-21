@@ -1,6 +1,6 @@
 ## Visible Thermal Person Re-Identification (Cross-modlaity Person Re-ID)
 
-Demo code for [Hierarchical Discriminative Learning for Visible Thermal Person Re-Identification](http://www.comp.hkbu.edu.hk/~mangye/files/aaai18.pdf) in AAAI 2018 and [Visible Thermal Person Re-Identification via Dual-Constrained Top-Ranking](http://www.comp.hkbu.edu.hk/~mangye/files/ijcai18.pdf) in IJCAI 2018 .
+Demo code for [Hierarchical Discriminative Learning for Visible Thermal Person Re-Identification](http://www.comp.hkbu.edu.hk/~mangye/files/aaai18_vtreid.pdf) in AAAI 2018 and [Visible Thermal Person Re-Identification via Dual-Constrained Top-Ranking](http://www.comp.hkbu.edu.hk/~mangye/files/ijcai18_vtreid.pdf) in IJCAI 2018 .
 
 The framework of our AAAI 18 paper: Two-Stage Framework (Feature Learning + Metric Learning)
 ![](http://www.comp.hkbu.edu.hk/~mangye/files/aaai18_framework.jpg)
@@ -12,6 +12,8 @@ The framework of our IJCAI 18 paper: End-to-End Learning
 ### 1. Prepare the dataset.
 
 - The RegDB dataset can be downloaded from this [website](http://dm.dongguk.edu/link.html) by submitting a copyright form.
+
+(Named: "Dongguk Body-based Person Recognition Database (DBPerson-Recog-DB1) on their website.")
 
 ### 2. Two-stream CNN network feature learning (TONE) in AAAI 2018
 
