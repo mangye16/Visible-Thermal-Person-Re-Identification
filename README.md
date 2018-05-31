@@ -42,7 +42,7 @@ All the code is in the folder 'HCML/' written in Matlab. This demo code has been
 
 All the code is in the folder 'BDTR/' written in Python. This demo code has been tested on Python 2.7 and Tensorflow v0.11. `(Better Performance)`
 
-- a. Prepare the dataset and the train/test lists as shown in `BDTR/dataset.py`. The list format is `image_path label`.
+- a. Prepare the dataset and the train/test lists as shown in `BDTR/dataset2.py`. The list format is `image_path label`.
 
 - b. Download the pre-trained alexnet model and modify the `BDTR/model.py`. [Alexnet](http://www.cs.toronto.edu/~guerzhoy/tf_alexnet/)
 
