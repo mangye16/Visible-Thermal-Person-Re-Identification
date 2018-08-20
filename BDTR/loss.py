@@ -1,4 +1,5 @@
 
+
 import tensorflow as tf
 import sys
 
@@ -8,7 +9,6 @@ import os
 from collections import defaultdict
 import numpy as np
 import cv2
-
 
 
 def all_diffs(a, b):
@@ -35,16 +35,19 @@ def gather_2d(params, indices):
     # only for two dim now
     shape = params.get_shape().as_list()
     assert len(shape) == 2, 'only support 2d matrix'
-    flat = tf.reshape(params, [np.prod(shape)])
-    flat_idx = tf.slice(indices, [0,0], [shape[0],1]) * shape[1] + tf.slice(indices, [0,1], [shape[0],1])
-    flat_idx = tf.reshape(flat_idx, [flat_idx.get_shape().as_list()[0]])
-    return tf.gather(flat, flat_idx)
+    if shape[1]>0:
+        flat = tf.reshape(params, [np.prod(shape)])
+        flat_idx = tf.slice(indices, [0,0], [shape[0],1]) * shape[1] + tf.slice(indices, [0,1], [shape[0],1])
+        flat_idx = tf.reshape(flat_idx, [flat_idx.get_shape().as_list()[0]])
+        return tf.gather(flat, flat_idx)
+    else:
+        return 0
                                
-def compute_birank_loss(feat1, feat2, batch_size):
+def compute_birank_loss(feat1, feat2, batch_size, margin = 0.5, lambda_intra = 0.1):
 
     y1 = [x for x in range(batch_size)]
     y2 = [x for x in range(batch_size)]
-    margin = 0.5
+    
     feat1 = tf.nn.l2_normalize(feat1, dim=1)
     feat2 = tf.nn.l2_normalize(feat2, dim=1)
     
@@ -61,6 +64,7 @@ def compute_birank_loss(feat1, feat2, batch_size):
     closest_negative = tf.reduce_min(dists_vt + 1e5*tf.cast(same_identity_mask, tf.float32), 1)
     pos_negative = tf.argmin(dists_vt + 1e5*tf.cast(same_identity_mask, tf.float32), 1)
     
+    # pdb.set_trace()
      # computer cross modality loss
     cross_diff1 = furthest_positive - closest_negative
     cross_diff1 = tf.maximum(cross_diff1 + margin, 0.0)
@@ -70,6 +74,7 @@ def compute_birank_loss(feat1, feat2, batch_size):
     intra_dist1 = cdist(feat2, feat2)
     idx1 = tf.concat(1,[tf.reshape(pos_positive,[batch_size,1]),tf.reshape(pos_negative,[batch_size,1])])
    
+    
     intra_diff1 = gather_2d(intra_dist1,idx1)
     intra_diff1 = tf.maximum(0.1 - intra_diff1, 0.0)
     intra_loss1 = tf.reduce_mean(intra_diff1)
@@ -109,6 +114,7 @@ def compute_birank_loss(feat1, feat2, batch_size):
     inter_loss = tf.add(loss_mean1, loss_mean2)   
     intra_loss = tf.add(intra_loss1, intra_loss2)
     
-    loss_sum = tf.add(inter_loss, 0.1*intra_loss)  
+    loss_sum = tf.add(inter_loss, lambda_intra*intra_loss)  
     
     return loss_sum, prec
+
