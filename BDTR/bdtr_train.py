@@ -1,7 +1,7 @@
 import tensorflow as tf
 import sys
 from model import Model
-from dataset import Dataset
+from dataset2 import Dataset
 from network import *
 from datetime import datetime
 from utils import *
