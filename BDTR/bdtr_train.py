@@ -167,7 +167,7 @@ def main():
                 test_t_norm  = tf.nn.l2_normalize(test_thermal_feat, dim=1)
                 distmat = tf.matmul(query_t_norm, test_t_norm, transpose_a=False, transpose_b=True)
                 
-                cmc, mAP = compute_accuracy(-distmat, test_color_labels[:batch_size], test_thermal_labels[:batch_size],topk=20)
+                cmc, mAP = compute_accuracy(-distmat, test_color_labels, test_thermal_labels,topk=20)
                 
                 print('top-1: {:.2%} | top-5: {:.2%} | top-10: {:.2%}| top-20: {:.2%}'.format(cmc[0], cmc[4], cmc[9], cmc[19]))
                 print('mAP: {:.2%}'.format(mAP))
