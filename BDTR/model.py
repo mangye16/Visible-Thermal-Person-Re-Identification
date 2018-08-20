@@ -202,14 +202,14 @@ class Model:
         return fc6r_2
         
     @staticmethod  
-    def modal_embedding(feature1, feature2, _dropout, feature=False):
+    def modal_embedding(feature1, feature2, _dropout, feature_dim = 1024, feature=False):
     
         feat = tf.concat(0,[feature1,feature2])
         feat = dropout(feat,_dropout)
         feat = tf.nn.relu(feat)
-        fc7 = fc(feat, 4096, 1024, name='fc7')
+        fc7 = fc(feat, 4096, feature_dim, name='fc7')
         fc7r = dropout(tf.nn.relu(fc7), _dropout)
-        result = fc(fc7r, 1024, 206, relu=False, name='fc8')
+        result = fc(fc7r, feature_dim, 206, relu=False, name='fc8')
         
         if feature==True:
             return fc7
