@@ -1,13 +1,13 @@
 ## Visible Thermal Person Re-Identification (Cross-modlaity Person Re-ID)
 
-Demo code for [Hierarchical Discriminative Learning for Visible Thermal Person Re-Identification](http://www.comp.hkbu.edu.hk/~mangye/files/aaai18_vtreid.pdf) in AAAI 2018 and [Visible Thermal Person Re-Identification via Dual-Constrained Top-Ranking](http://www.comp.hkbu.edu.hk/~mangye/files/ijcai18_vtreid.pdf) in IJCAI 2018 .
+Demo code for [Hierarchical Discriminative Learning for Visible Thermal Person Re-Identification](https://www.aaai.org/ocs/index.php/AAAI/AAAI18/paper/view/16734/16350) in AAAI 2018 and [Visible Thermal Person Re-Identification via Dual-Constrained Top-Ranking](https://www.ijcai.org/proceedings/2018/0152.pdf) in IJCAI 2018 .
 
 The framework of our AAAI 18 paper: Two-Stage Framework (Feature Learning + Metric Learning)
-![](http://www.comp.hkbu.edu.hk/~mangye/files/aaai18_framework.jpg)
+![](https://github.com/mangye16/Visible-Thermal-Person-Re-Identification/blob/master/HCML/aaai18_framework.jpg)
 
 
 The framework of our IJCAI 18 paper: End-to-End Learning
-![](http://www.comp.hkbu.edu.hk/~mangye/files/ijcai18_framework.jpg)
+![](https://github.com/mangye16/Visible-Thermal-Person-Re-Identification/blob/master/BDTR/ijcai18_framework.jpg)
 
 ### 1. Prepare the dataset.
 
